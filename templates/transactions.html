@@ -1,0 +1,16 @@
+<h2>Transaction History</h2>
+<table border="1">
+  <tr>
+    <th>Type</th>
+    <th>Amount</th>
+    <th>Date</th>
+  </tr>
+  {% for txn in transactions %}
+  <tr>
+    <td>{{ txn.Type }}</td>
+    <td>£{{ txn.Amount }}</td>
+    <td>{{ txn.Timestamp }}</td>
+  </tr>
+  {% endfor %}
+</table>
+<a href="/dashboard">Back to Dashboard</a>
